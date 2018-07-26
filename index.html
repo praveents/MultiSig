@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatiable" content=" ie-edge">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="./web3.min.js"></script>
+  <link rel="stylesheet" href="./multisig.css">
+</head>
+<body>
+  <table style="width: 100%;">
+    <tr>
+      <td class="tableFormat">
+        <form>
+          <table style="width: 100%;">
+            <tr>
+              <td style="text-align: center" colspan="2">
+                <br>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="IP_ContributionValue">Contribution Value</label>
+              </td>
+              <td>
+                <input id="IP_ContributionValue" label = "Enter Contribution" type="text" class="textBoxFormat">
+
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align: center" colspan="2">
+                <br>
+                <button id="BT_ContributionValue" class="buttonFormat">Send Contribution</button>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align: center" colspan="2">
+                <br>
+                <br>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="LI_SubmitSigners">Signers</label>
+              </td>
+              <td>
+                <select id ="LI_SubmitSigners"  class="ddlFormat">
+                    <option value="0xfA3C6a1d480A14c546F12cdBB6d1BaCBf02A1610">0xfA3C6a1d480A14c546F12cdBB6d1BaCBf02A1610</option>
+                    <option value="0x2f47343208d8Db38A64f49d7384Ce70367FC98c0">0x2f47343208d8Db38A64f49d7384Ce70367FC98c0</option>
+                    <option value="0x7c0e7b2418141F492653C6bF9ceD144c338Ba740">0x7c0e7b2418141F492653C6bF9ceD144c338Ba740</option>          
+                </select>
+                <br>
+                <br>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="text-align: center" colspan="2">
+                <button id="BT_EndContributions" class="buttonFormat">End Contribution</button>
+                <br>
+                <br>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </td>
+      <td style="vertical-align: top;" class="tableFormat">
+        <form>
+
+          <table style="width: 100%;">
+            <tr>
+              <td style="text-align: center" colspan="2">
+                <br>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="LI_SignSigners">Signers</label>
+
+              </td>
+              <td>
+                <select id="LI_SignSigners" class="ddlFormat">
+                  <option value="0xfA3C6a1d480A14c546F12cdBB6d1BaCBf02A1610">0xfA3C6a1d480A14c546F12cdBB6d1BaCBf02A1610</option>
+                  <option value="0x2f47343208d8Db38A64f49d7384Ce70367FC98c0">0x2f47343208d8Db38A64f49d7384Ce70367FC98c0</option>
+                  <option value="0x7c0e7b2418141F492653C6bF9ceD144c338Ba740">0x7c0e7b2418141F492653C6bF9ceD144c338Ba740</option>        
+                </select>
+                <br>
+                <br>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="IP_SignProposers">Proposer</label>
+              </td>
+              <td>
+                <input id="IP_SignProposers"  type="text" class="textBoxFormat">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button id="BT_Approve" style="float: right;" class="buttonFormat">Approve</button>
+              </td>
+              <td>
+                <button id="BT_Reject" style="margin-left: 10%;" class="buttonFormat">Reject</button>
+              </td>
+            </tr>
+      </table>
+    </form>
+  </td>
+</tr>
+<tr>
+  <td class="tableFormat">
+    <form>
+      <table style="width: 100%;">
+        <tr>
+          <td style="text-align: center" colspan="2">
+            <br>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="IP_SubmitProposers">Proposer</label>
+          </td>
+          <td>
+            <input id="IP_SubmitProposers"  type="text" class="textBoxFormat">
+          </td>
+        </tr>
+        <tr>
+          <td >
+            <br>
+            <label for="IP_SubmitProposalValue">Proposal Value</label>
+          </td>
+          <td >
+            <br>
+            <input name="IP_SubmitProposalValue" id="IP_SubmitProposalValue" type="text" class="textBoxFormat">
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: center" colspan="2">
+            <br>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2"  style="text-align: center;">
+            <button id="BT_SubmitProposal" class="buttonFormat" class="buttonFormat">Submit Proposal</button>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: center" colspan="2">
+            <br>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <br>
+            <label for="IP_WithdrawProposer">Proposer</label>
+          </td>
+          <td>
+            <br>
+            <input name = "proposer" id="IP_WithdrawProposer"  type="text" class="textBoxFormat">
+          </tr>
+          <tr>
+            <td>
+              <br>
+              <label for="IP_WithdrawValue">Withdraw Value</label>
+            </td>
+            <td>
+              <br>
+              <input name="IP_WithdrawValue" id="IP_WithdrawValue" type="text" style=" width: 70%;height: 25px;">
+              <button id="BT_Withdraw"  style="width: 25%;" class="buttonFormat">Withdraw</button>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: center" colspan="2">
+              <br>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </td>
+    <td style="vertical-align: top;" class="tableFormat">
+      <form>
+        <table style="width: 100%;">
+          <tr>
+            <td style="text-align: center" colspan="2">
+              <br>
+            </td>
+          </tr>
+          <tr>
+            <button id="BT_OpenBeneficiaries"  style="width: 30%;" class="buttonFormat">Beneficaries</button>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <textarea id='IP_OpenBeneficiariesList' placeholder="Comment Here..." rows="10" style="width: 90%"></textarea>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="text-align: center" colspan="2">
+              <br>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </td>
+  </tr>
+</table>
+
+
+<!--
+
+
+
+
+<pre id="output">
+
+</pre> -->
+
+<script>
+if (typeof web3 === 'undefined') {
+  $('#metamask').text('Ops, MetaMask is not installed!');
+}
+
+web3js = new Web3(web3.currentProvider);
+console.log(web3js);
+var MultiSigAddress = "0xc86C6B93398Ab9b5673E608409ed2Fe325322d3e";
+var MultiSigContract = web3.eth.contract([{"constant":false,"inputs":[],"name":"endContributionPeriod","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"listContributors","outputs":[{"name":"","type":"address[]"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_valueInWei","type":"uint256"}],"name":"withdraw","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_contributor","type":"address"}],"name":"getContributorAmount","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"listOpenBeneficiariesProposals","outputs":[{"name":"","type":"address[]"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_valueInWei","type":"uint256"}],"name":"submitProposal","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_signer","type":"address"},{"name":"_beneficiary","type":"address"}],"name":"getSignerVote","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_beneficiary","type":"address"}],"name":"reject","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_beneficiary","type":"address"}],"name":"getBeneficiaryProposal","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_beneficiary","type":"address"}],"name":"approve","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"payable":true,"stateMutability":"payable","type":"fallback"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_beneficiary","type":"address"},{"indexed":false,"name":"_valueInWei","type":"uint256"}],"name":"ProposalSubmitted","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_approver","type":"address"},{"indexed":true,"name":"_beneficiary","type":"address"},{"indexed":false,"name":"_valueInWei","type":"uint256"}],"name":"ProposalApproved","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_rejecter","type":"address"},{"indexed":true,"name":"_beneficiary","type":"address"},{"indexed":false,"name":"_valueInWei","type":"uint256"}],"name":"ProposalRejected","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_beneficiary","type":"address"},{"indexed":false,"name":"_valueInWei","type":"uint256"}],"name":"WithdrawPerformed","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_contributor","type":"address"},{"indexed":false,"name":"_valueInWei","type":"uint256"}],"name":"ReceivedContribution","type":"event"}]);
+var MultiSigInstance = MultiSigContract.at(MultiSigAddress);
+console.log(MultiSigInstance)
+
+
+var Var_BT_ContributionValue = document.getElementById("BT_ContributionValue");
+var Var_BT_EndContributions = document.getElementById("BT_EndContributions");
+var Var_IP_ContributionValue = document.getElementById("IP_ContributionValue");
+var Var_LI_SubmitSigners = document.getElementById("LI_SubmitSigners");
+
+var Var_LI_SignSigners = document.getElementById("LI_SignSigners");
+var Var_BT_Approve = document.getElementById("BT_Approve");
+var Var_BT_Reject = document.getElementById("BT_Reject");
+var Var_IP_SignProposers = document.getElementById("IP_SignProposers");
+
+
+var Var_BT_Withdraw = document.getElementById("BT_Withdraw");
+var Var_IP_WithdrawValue = document.getElementById("IP_WithdrawValue");
+var Var_IP_WithdrawProposer = document.getElementById("IP_WithdrawProposer");
+
+var Var_IP_SubmitProposalValue = document.getElementById("IP_SubmitProposalValue");
+var Var_IP_SubmitProposers = document.getElementById("IP_SubmitProposers");
+var Var_BT_SubmitProposal = document.getElementById("BT_SubmitProposal");
+
+var Var_BT_OpenBeneficiaries = document.getElementById("BT_OpenBeneficiaries");
+var Var_IP_OpenBeneficiariesList = document.getElementById("IP_OpenBeneficiariesList");
+/* 
+web3.eth.getAccounts(function(err, result) {
+console.log(result[0]);
+console.log(result[1]);
+console.log(result[2]);
+var option = document.createElement("option");
+option.text = result[0];
+option.value = result[0];
+Var_LI_SubmitSigners.add(option);
+
+var option = document.createElement("option");
+option.text = result[1];
+option.value = result[1];
+Var_LI_SubmitSigners.add(option);
+
+var option = document.createElement("option");
+option.text = result[2];
+option.value = result[2];
+Var_LI_SubmitSigners.add(option);
+
+var option = document.createElement("option");
+option.text = result[0];
+option.value = result[0];
+Var_LI_SignSigners.add(option);
+
+var option = document.createElement("option");
+option.text = result[1];
+option.value = result[1];
+Var_LI_SignSigners.add(option);
+
+var option = document.createElement("option");
+option.text = result[2];
+option.value = result[2];
+Var_LI_SignSigners.add(option); 
+});
+ */
+
+// updateOpenBenefecaries();
+
+Var_BT_SubmitProposal.addEventListener('click', function(){
+  console.log('Submit Proposal');
+  var _submitProposer = Var_IP_SubmitProposers.value;
+  var _submitValue = Var_IP_SubmitProposalValue.value;
+  console.log(_submitProposer);
+  console.log(_submitValue);
+  MultiSigInstance.submitProposal(_submitValue,{from:_submitProposer,gas: 617200},function(err, result){
+    if(err){
+      console.log(err);
+    }
+    else{
+      console.log(result);
+    }
+  });
+});
+
+Var_BT_Withdraw.addEventListener('click', function(){
+  console.log('Withdraw done');
+  var _withdrawProposer = Var_IP_WithdrawProposer.value;
+  var _withdrawValue = Var_IP_WithdrawValue.value;
+  console.log(_withdrawProposer);
+  console.log(_withdrawValue);
+  MultiSigInstance.withdraw(_withdrawValue,{from:_withdrawProposer,gas: 617200},function(err, result){
+    if(err){
+      console.log(err);
+    }
+    else{
+      console.log(result);
+    }
+  });
+});
+
+Var_BT_OpenBeneficiaries.addEventListener('click', function(){
+  console.log('List of Open Benefecaries');
+  updateOpenBenefecaries();
+});
+
+Var_BT_Approve.addEventListener('click', function(){
+  console.log('Approved');
+  var _approveSigner = Var_LI_SignSigners.value;
+  var _approveProposer = Var_IP_SignProposers.value;
+
+  MultiSigInstance.approve(_approveProposer,{from:_approveSigner,gas: 617200},function(err, result){
+    if(err){
+      console.log(err);
+    }
+    else{
+      console.log(result);
+    }
+  });
+});
+
+Var_BT_Reject.addEventListener('click', function(){
+  console.log('Rejected');
+  var _rejectSigner = Var_LI_SignSigners.value;
+  var _rejectProposer = Var_IP_SignProposers.value;
+
+  MultiSigInstance.reject(_rejectProposer,{from:_rejectSigner,gas: 617200},function(err, result){
+    if(err){
+      console.log(err);
+    }
+    else{
+      console.log(result);
+    }
+  });
+});
+
+Var_BT_EndContributions.addEventListener('click', function(){
+  console.log('End Contribution');
+  var _endSigner = Var_LI_SubmitSigners.value;
+  console.log(_endSigner);
+  var getData = MultiSigInstance.endContributionPeriod.getData();
+  web3.eth.sendTransaction({to:MultiSigAddress, from:_endSigner, data: getData, gas:617200},function(err, result){
+
+  });
+  // ({from:_endSigner,gas:617200})
+  // ,function(err, result){
+  //   if(err){
+  //     console.log(err);
+  //   }
+  //   else{
+  //     console.log(result);
+  //   }
+  // });
+});
+
+Var_BT_ContributionValue.addEventListener('click', function(){
+  console.log('Sending Contribution');
+
+  var _contributeValue = Var_IP_ContributionValue.value;
+  var _contributeSigner = Var_LI_SubmitSigners.value;
+
+  console.log(_contributeSigner);
+
+  if (_contributeValue.trim() == '') {
+    alert("Enter value");
+  }
+
+  if (isNaN(_contributeValue) || _contributeValue <= 0) {
+    alert("The value must be a number greater than 1");
+  }
+
+
+  web3.eth.sendTransaction({from:_contributeSigner,to:MultiSigAddress,gas: 617200, value:_contributeValue}, function(err, result){
+    if(err){
+      console.log(err);
+    }
+    else{
+      console.log(result);
+    }
+  });
+});
+
+function updateOpenBenefecaries(){
+  var _listBeneficiaries = "";
+  var _endSigner = Var_LI_SubmitSigners.value;
+  // var getData = MultiSigInstance.listOpenBeneficiariesProposals.getData();
+  // console.log(getData);
+  // web3.eth.sendTransaction({to:MultiSigAddress, from:_endSigner, data: getData, gas:617200},function(err, result){
+  // console.log(result);
+  // var _arrayBeneficiaries ="";
+  // for (i = 0 ; i < _listBeneficiaries.length; i++){
+  //   _arrayBeneficiaries += _listBeneficiaries[i];
+  //   _arrayBeneficiaries += "\n";
+  // }
+
+  _listBeneficiaries = MultiSigInstance.listOpenBeneficiariesProposals({to:MultiSigAddress, from:web3.eth.defaultAccount, gas:617200}, function(err, result){
+  });
+
+  console.log(_listBeneficiaries);
+  var _arrayBeneficiaries ="";
+  for (i = 0 ; i < _listBeneficiaries.length; i++){
+    _arrayBeneficiaries += _listBeneficiaries[i];
+    _arrayBeneficiaries += "\n";
+    }
+  console.log(_arrayBeneficiaries);
+  Var_IP_OpenBeneficiariesList.value = _arrayBeneficiaries;
+  
+
+}
+</script>
+
+</body>
+</html>

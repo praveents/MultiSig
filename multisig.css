@@ -1,0 +1,160 @@
+/* input {
+  padding: 5px;
+  font-size: 16px;
+} */
+
+/* button {
+  font-size: 16px;
+  padding: 5px;
+  top: 60%;
+  left: 50%;
+} */
+
+.tableFormat{
+  border: 2px solid grey; 
+}
+
+.buttonFormat{
+  font-size: 16px;
+  height: 34px;
+}
+
+.textBoxFormat,.ddlFormat{
+  width: 80%;
+  height: 25px;
+}
+/*  
+
+.cont_label{
+  top: 60%;
+  left: 50%;
+}
+
+.prop_label{
+  top: 60%;
+  left: 50%;
+}
+
+
+
+
+
+.list_signers{
+  position:absolute;
+  transition: .5s ease;
+  top: 10%;
+  left: 15%;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.list_signers2{
+  position:absolute;
+  transition: .5s ease;
+  top: 5%;
+  left: 60%;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.list_proposor{
+  position:absolute;
+  transition: .5s ease;
+  top: 15%;
+  left: 60%;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.list_proposor2{
+  position:absolute;
+  transition: .5s ease;
+  top: 55%;
+  left: 10%;
+  font-size: 16px;
+  padding: 5px;
+}
+
+
+.bt_SendCont{
+  position:absolute;
+  transition: .5s ease;
+  top: 1%;
+  left: 35%;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.bt_EndCont{
+  position:absolute;
+  transition: .5s ease;
+  top: 20%;
+  left: 32%;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.bt_SubProp{
+  position:absolute;
+  transition: .5s ease;
+  top: 35%;
+  left: 1%;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.ip_propval{
+  position:absolute;
+  top: 35%;
+  left: 13%;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.bt_Debit{
+  position:absolute;
+  transition: .5s ease;
+  top: 55%;
+  left: 1%;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.withdraw_label{
+  top: 55%;
+  left: 45%;
+}
+.ip_withdraw{
+  position:absolute;
+  top: 55%;
+  left: 55%;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.Approve{
+  position:absolute;
+  transition: .5s ease;
+  top: 23%;
+  left: 70%;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.Reject{
+  position:absolute;
+  transition: .5s ease;
+  top: 23%;
+  left: 80%;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.ListBenf{
+  position:absolute;
+  transition: .5s ease;
+  top: 50%;
+  left: 75%;
+  font-size: 16px;
+  padding: 5px;
+} */
